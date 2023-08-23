@@ -6,12 +6,19 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
+      body: body(context)
+    );
+  }
+
+  Widget body(context) {
+    return Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             OutlinedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, "1");
+                },
                 style: OutlinedButton.styleFrom(
                     shape: const StadiumBorder(),
                     fixedSize: const Size(200, 50),
@@ -24,7 +31,9 @@ class HomeScreen extends StatelessWidget {
               height: 40,
             ),
             OutlinedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, "2");
+                },
                 style: OutlinedButton.styleFrom(
                     shape: const StadiumBorder(),
                     fixedSize: const Size(200, 50),
@@ -33,7 +42,6 @@ class HomeScreen extends StatelessWidget {
                     style: TextStyle(fontSize: 25, color: Colors.white)))
           ],
         ),
-      ),
-    );
+      );
   }
 }

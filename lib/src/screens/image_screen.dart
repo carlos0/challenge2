@@ -6,15 +6,24 @@ class ImageScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar: appBarY(),
+      body: body()
+    );
+  }
+
+  AppBar appBarY(){
+    return AppBar(
         title: const Text(
           "Pokemón Choose",
           style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
         backgroundColor: Colors.yellowAccent,
-      ),
-      body: const Center(
+      );
+  }
+
+  Widget body() {
+    return const Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -33,7 +42,6 @@ class ImageScreen extends StatelessWidget {
             )
           ],
         ),
-      ),
-    );
+      );
   }
 }

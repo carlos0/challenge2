@@ -8,9 +8,13 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ImageScreen(),
+      home: const HomeScreen(),
+      routes: {
+        '1': (context) => const ImageScreen(),
+        '2': (context) => const WebviewScreen()
+      },
     );
   }
 }
