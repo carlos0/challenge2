@@ -6,7 +6,6 @@ class WebviewScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     WebViewController controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..setNavigationDelegate(NavigationDelegate(
@@ -14,22 +13,21 @@ class WebviewScreen extends StatelessWidget {
           print("Progreso de carga: $progress");
         },
       ))
-      ..loadRequest(Uri.parse("https://www.youtube.com"));
+      ..loadRequest(Uri.parse("https://www.wikidex.net"));
     return Scaffold(
       appBar: appBarY(),
       body: WebViewWidget(controller: controller),
-
     );
   }
 
   AppBar appBarY() {
     return AppBar(
-        title: const Text(
-          "Pokemón Choose",
-          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
-        ),
-        centerTitle: true,
-        backgroundColor: Colors.yellowAccent,
-      );
+      title: const Text(
+        "Pokemón Choose",
+        style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+      ),
+      centerTitle: true,
+      backgroundColor: Colors.orangeAccent,
+    );
   }
 }
